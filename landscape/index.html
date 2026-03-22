@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="FORM/GROUND">
+  <link rel="manifest" href="../manifest.json">
+  <link rel="apple-touch-icon" href="../icon-192.png">
+  <title>Agency Artifact / FORM/GROUND</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Archivo+Black&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/global.css">
+  <style>
+    body {
+      background: var(--black);
+      color: var(--white);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .nav-landscape {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 0 48px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(247, 244, 239, 0.08);
+    }
+
+    .nav-landscape-left {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-landscape-parent {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--dust);
+      text-decoration: none;
+      transition: color 0.2s;
+      cursor: none;
+    }
+    .nav-landscape-parent:hover { color: var(--white); }
+
+    .nav-landscape-sep {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      color: var(--slate);
+      margin: 0 12px;
+    }
+
+    .nav-landscape-studio {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--white);
+    }
+
+    .landscape-hero {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-top: 64px;
+      text-align: center;
+      gap: 24px;
+    }
+
+    .landscape-eyebrow {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .landscape-title {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: clamp(48px, 8vw, 120px);
+      line-height: 0.9;
+      text-transform: uppercase;
+      color: var(--white);
+    }
+
+    .landscape-title em {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 300;
+      color: var(--gold);
+      display: block;
+    }
+
+    .landscape-subtitle {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--dust);
+    }
+
+    .landscape-body {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1.8;
+      color: var(--slate);
+      max-width: 40ch;
+    }
+
+    .landscape-status {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border: 1px solid rgba(184, 168, 130, 0.3);
+      padding: 8px 20px;
+      margin-top: 16px;
+    }
+
+    .landscape-back {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: none;
+      padding: 40px 48px;
+    }
+    .landscape-back::before { content: '\2190'; }
+  </style>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+
+<nav class="nav-landscape">
+  <div class="nav-landscape-left">
+    <a href="../" class="nav-landscape-parent">FORM/GROUND</a>
+    <span class="nav-landscape-sep">/</span>
+    <span class="nav-landscape-studio">Agency Artifact</span>
+  </div>
+</nav>
+
+<section class="landscape-hero">
+  <div class="landscape-eyebrow">Masterplan &amp; Landscape&nbsp;&nbsp;&middot;&nbsp;&nbsp;Agency Artifact&nbsp;&nbsp;&middot;&nbsp;&nbsp;Los Angeles</div>
+  <h1 class="landscape-title">
+    Agency<br>
+    <em>Artifact</em>
+  </h1>
+  <p class="landscape-subtitle">Landscape Architecture &amp; Urbanism</p>
+  <p class="landscape-body">
+    Bold ideas for a more equitable public realm. From garden to masterplan, community-rooted and systems-minded.
+  </p>
+  <div class="landscape-status">Full Page Coming Soon</div>
+</section>
+
+<a href="../" class="landscape-back">Back to FORM/GROUND</a>
+
+<script src="../assets/js/cursor.js"></script>
+</body>
+</html>

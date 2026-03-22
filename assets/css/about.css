@@ -1,0 +1,258 @@
+/* ═══════════════════════════════════════════════
+   ABOUT.CSS — About / Manifesto Page
+   FORM/GROUND Multi-Studio Website
+   ═══════════════════════════════════════════════ */
+
+/* ─── REVEAL ANIMATIONS ─────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── NAVIGATION ────────────────────────────── */
+.about-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 0 48px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to bottom, rgba(8, 8, 8, 0.9) 0%, transparent 100%);
+}
+
+.about-nav-logo {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.22em;
+  color: var(--white);
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.about-nav-logo span {
+  color: var(--gold);
+  font-family: 'DM Mono', monospace;
+  font-weight: 300;
+  letter-spacing: 0;
+  font-size: 11px;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+.about-nav-back {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--dust);
+  text-decoration: none;
+  transition: color 0.25s;
+}
+
+.about-nav-back:hover {
+  color: var(--white);
+}
+
+/* ─── ROW 1 — TITLE + PARAGRAPHS 1–2 ────────── */
+.about-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  padding: 0 48px;
+  align-items: end;
+  min-height: 100vh;
+  padding-bottom: 80px;
+}
+
+.about-title {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: clamp(64px, 10vw, 160px);
+  line-height: 0.85;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: var(--white);
+  position: sticky;
+  top: 120px;
+}
+
+.about-top-text {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  max-width: 760px;
+}
+
+/* ─── ROW 2 — PARAGRAPHS 3–4 + IMAGE ────────── */
+.about-bottom {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 64px;
+  padding: 40px 0 0 48px;
+  align-items: end;
+}
+
+.about-bottom-text {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  max-width: 760px;
+  padding-bottom: 80px;
+}
+
+.about-bottom-image {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.about-bottom-image img {
+  width: 120%;
+  height: auto;
+  display: block;
+}
+
+/* ─── SHARED PARAGRAPH STYLE ─────────────────── */
+.about-paragraph {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(24px, 2.2vw, 32px);
+  font-weight: 300;
+  line-height: 1.75;
+  color: var(--white);
+  text-align: justify;
+}
+
+.about-paragraph em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+/* ─── CLIENTS & COLLABORATORS ────────────────── */
+.about-collaborators {
+  padding: 320px 48px 100px;
+  border-top: 1px solid rgba(247, 244, 239, 0.06);
+}
+
+.about-collaborators-title {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: clamp(28px, 4vw, 52px);
+  line-height: 0.85;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 48px;
+}
+
+.about-collaborators-logos {
+  width: 100%;
+}
+
+.about-collaborators-logos img {
+  width: 100%;
+  height: auto;
+  display: block;
+  opacity: 0.8;
+  transition: opacity 0.4s;
+}
+
+.about-collaborators-logos img:hover {
+  opacity: 1;
+}
+
+/* ─── FOOTER ─────────────────────────────────── */
+.about-footer {
+  border-top: 1px solid rgba(247, 244, 239, 0.08);
+  padding: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about-footer-logo {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  color: var(--slate);
+  text-transform: uppercase;
+}
+
+.about-footer-note {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  color: var(--slate);
+  opacity: 0.5;
+}
+
+/* ─── RESPONSIVE ─────────────────────────────── */
+@media (max-width: 900px) {
+  .about-top {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 120px 32px 60px;
+  }
+
+  .about-title {
+    position: static;
+  }
+
+  .about-top-text {
+    max-width: 100%;
+  }
+
+  .about-bottom {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 40px 32px 0;
+  }
+
+  .about-bottom-text {
+    max-width: 100%;
+    padding-bottom: 0;
+  }
+
+  .about-collaborators {
+    padding: 60px 32px 80px;
+  }
+
+  .about-nav {
+    padding: 0 32px;
+  }
+
+  .about-footer {
+    padding: 32px;
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-top {
+    padding: 100px 24px 48px;
+    gap: 32px;
+  }
+
+  .about-bottom {
+    padding: 32px 24px 0;
+    gap: 32px;
+  }
+
+  .about-collaborators {
+    padding: 48px 24px 64px;
+  }
+
+  .about-nav {
+    padding: 0 24px;
+  }
+}

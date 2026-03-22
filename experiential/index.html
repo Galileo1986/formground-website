@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="FORM/GROUND">
+  <link rel="manifest" href="../manifest.json">
+  <link rel="apple-touch-icon" href="../icon-192.png">
+  <title>Experiential / FORM/GROUND</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Archivo+Black&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/global.css">
+  <style>
+    body {
+      background: var(--black);
+      color: var(--white);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 24px;
+    }
+
+    .exp-eyebrow {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      opacity: 0.6;
+    }
+
+    .exp-title {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: clamp(36px, 6vw, 72px);
+      text-transform: uppercase;
+      color: var(--white);
+      line-height: 0.92;
+    }
+
+    .exp-subtitle {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--dust);
+    }
+
+    .exp-status {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--slate);
+      margin-top: 16px;
+    }
+
+    .exp-back {
+      position: fixed;
+      bottom: 40px;
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: none;
+    }
+    .exp-back::before { content: '\2190'; }
+  </style>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+
+<div class="exp-eyebrow">Shared Practice</div>
+<h1 class="exp-title">Experi&shy;ential</h1>
+<p class="exp-subtitle">Installation, Event &amp; Activation Design</p>
+<div class="exp-status">Coming Soon</div>
+
+<a href="../" class="exp-back">Back to FORM/GROUND</a>
+
+<script src="../assets/js/cursor.js"></script>
+</body>
+</html>

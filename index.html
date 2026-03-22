@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="FORM/GROUND">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <title>FORM/GROUND / Multi-Studio Entity</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Archivo+Black&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/parent.css">
+</head>
+<body>
+
+<!-- Custom cursor -->
+<div class="cursor" id="cursor"></div>
+
+<!-- ══════════════════════════════════════════════
+     NAVIGATION
+══════════════════════════════════════════════ -->
+<nav class="nav-parent">
+  <a href="/" class="nav-logo">FORM/GROUND<span>[TBD]</span></a>
+  <ul class="nav-links">
+    <li><a href="territory/">Territory</a></li>
+    <li><a href="habitat/">Habitat</a></li>
+    <li><a href="atmosphere/">Atmosphere</a></li>
+    <li><a href="artifact/">Artifact</a></li>
+    <li><a href="about/">About</a></li>
+  </ul>
+</nav>
+
+<!-- Single fixed wrapper — ONE lerped translateY drives all content -->
+<div class="scroll-wrapper" id="scrollWrapper">
+
+<!-- ══════════════════════════════════════════════
+     HERO
+══════════════════════════════════════════════ -->
+<section class="hero-parent">
+  <div class="hero-grid-overlay"></div>
+  <div class="hero-index">Los Angeles&nbsp;&nbsp;&middot;&nbsp;&nbsp;est. 2025&nbsp;&nbsp;&middot;&nbsp;&nbsp;Three Studios, One Vision</div>
+  <h1 class="hero-headline">
+    The Extraordinary<br>
+    <em>Belongs</em><br>
+    Everywhere
+  </h1>
+  <div class="hero-sub">
+    <p class="hero-manifesto">
+      We are a design partnership working across landscape, architecture, and interior and events. We shape public life. The spaces where people gather, move, work, and remember. From the park to the courtyard, from the courtyard to the room. Every scale at which a life unfolds.
+    </p>
+    <div class="hero-scroll">Scroll to explore</div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     IMAGE FILMSTRIP
+══════════════════════════════════════════════ -->
+<div class="image-strip" id="imageStrip">
+  <div class="image-strip-track" id="stripTrack">
+    <!-- Set A -->
+    <div class="strip-slide" style="width:520px">
+      <img src="https://images.squarespace-cdn.com/content/v1/6772fe52cc15853d7a83a950/88bdd365-b812-4099-9d00-2df20ab3565e/Shriners_020_NilsTimm.jpg" alt="Shriners Hospital Campus">
+      <span class="strip-slide-tag">Landscape</span>
+      <div class="strip-slide-caption">
+        <div class="strip-caption-title">Shriners Hospital Campus</div>
+        <div class="strip-caption-meta">Agency Artifact &middot; Civic</div>
+      </div>
+    </div>
+    <div class="strip-slide" style="width:360px">
+      <img src="https://images.squarespace-cdn.com/content/v1/6772fe52cc15853d7a83a950/ad25c9be-24c5-45eb-90c4-b4ab252891f1/glendower2404-034.jpg" alt="Garden of the Horizon">
+      <span class="strip-slide-tag">Landscape</span>
+      <div class="strip-slide-caption">
+        <div class="strip-caption-title">Garden of the Horizon</div>
+        <div class="strip-caption-meta">Agency Artifact &middot; Residential</div>
+      </div>
+    </div>
+    <div class="strip-slide" style="width:480px">
+      <img src="https://images.squarespace-cdn.com/content/v1/6772fe52cc15853d7a83a950/0e1bca2d-f4de-4116-8ed4-8f1184586edb/aerial_new.jpg" alt="Isla Intersections">
+      <span class="strip-slide-tag">Urbanism</span>
+      <div class="strip-slide-caption">
+        <div class="strip-caption-title">Isla Intersections</div>
+        <div class="strip-caption-meta">Agency Artifact &middot; Housing</div>
+      </div>
+    </div>
+    <div class="strip-slide" style="width:400px">
+      <img src="https://images.squarespace-cdn.com/content/v1/6772fe52cc15853d7a83a950/81efa728-c132-4a23-9916-8f2b02e7e1e4/connecting_compton_1.jpg" alt="Connecting Compton">
+      <span class="strip-slide-tag">Landscape</span>
+      <div class="strip-slide-caption">
+        <div class="strip-caption-title">Connecting Compton</div>
+        <div class="strip-caption-meta">Agency Artifact &middot; Community</div>
+      </div>
+    </div>
+    <div class="strip-slide" style="width:540px">
+      <img src="https://images.squarespace-cdn.com/content/v1/6772fe52cc15853d7a83a950/1409a756-18ff-4ad8-939e-54f0215af46f/superbloom_web_3.jpg" alt="Superbloom">
+      <span class="strip-slide-tag">Masterplan</span>
+      <div class="strip-slide-caption">
+        <div class="strip-caption-title">Superbloom / Lancaster</div>
+        <div class="strip-caption-meta">Agency Artifact &middot; 50 acres</div>
+      </div>
+    </div>
+    <div class="strip-slide" style="width:380px">
+      <img src="https://images.squarespace-cdn.com/content/v1/6772fe52cc15853d7a83a950/25a4da9c-78ab-438c-b510-d8fdeb830d2f/2.+Courtyard+02.jpg" alt="The Outdoor Office">
+      <span class="strip-slide-tag">Architecture</span>
+      <div class="strip-slide-caption">
+        <div class="strip-caption-title">The Outdoor Office</div>
+        <div class="strip-caption-meta">Agency Artifact &middot; Commercial</div>
+      </div>
+    </div>
+    <div class="strip-slide" style="width:460px">
+      <img src="https://images.squarespace-cdn.com/content/v1/6772fe52cc15853d7a83a950/83337015-22c5-4698-9001-8968577a006b/1OM_MODEL_07_IG.jpg" alt="1 October Memorial">
+      <span class="strip-slide-tag">Civic</span>
+      <div class="strip-slide-caption">
+        <div class="strip-caption-title">1 October Memorial</div>
+        <div class="strip-caption-meta">Agency Artifact &middot; Las Vegas</div>
+      </div>
+    </div>
+
+    <!-- Set B — duplicate for seamless loop -->
+    <div class="strip-slide" style="width:520px">
+      <img src="https://images.squarespace-cdn.com/content/v1/6772fe52cc15853d7a83a950/88bdd365-b812-4099-9d00-2df20ab3565e/Shriners_020_NilsTimm.jpg" alt="Shriners Hospital Campus">
+      <span class="strip-slide-tag">Landscape</span>
+      <div class="strip-slide-caption">
+        <div class="strip-caption-title">Shriners Hospital Campus</div>
+        <div class="strip-caption-meta">Agency Artifact &middot; Civic</div>
+      </div>
+    </div>
+    <div class="strip-slide" style="width:360px">
+      <img src="https://images.squarespace-cdn.com/content/v1/6772fe52cc15853d7a83a950/ad25c9be-24c5-45eb-90c4-b4ab252891f1/glendower2404-034.jpg" alt="Garden of the Horizon">
+      <span class="strip-slide-tag">Landscape</span>
+      <div class="strip-slide-caption">
+        <div class="strip-caption-title">Garden of the Horizon</div>
+        <div class="strip-caption-meta">Agency Artifact &middot; Residential</div>
+      </div>
+    </div>
+    <div class="strip-slide" style="width:480px">
+      <img src="https://images.squarespace-cdn.com/content/v1/6772fe52cc15853d7a83a950/0e1bca2d-f4de-4116-8ed4-8f1184586edb/aerial_new.jpg" alt="Isla Intersections">
+      <span class="strip-slide-tag">Urbanism</span>
+      <div class="strip-slide-caption">
+        <div class="strip-caption-title">Isla Intersections</div>
+        <div class="strip-caption-meta">Agency Artifact &middot; Housing</div>
+      </div>
+    </div>
+    <div class="strip-slide" style="width:400px">
+      <img src="https://images.squarespace-cdn.com/content/v1/6772fe52cc15853d7a83a950/81efa728-c132-4a23-9916-8f2b02e7e1e4/connecting_compton_1.jpg" alt="Connecting Compton">
+      <span class="strip-slide-tag">Landscape</span>
+      <div class="strip-slide-caption">
+        <div class="strip-caption-title">Connecting Compton</div>
+        <div class="strip-caption-meta">Agency Artifact &middot; Community</div>
+      </div>
+    </div>
+    <div class="strip-slide" style="width:540px">
+      <img src="https://images.squarespace-cdn.com/content/v1/6772fe52cc15853d7a83a950/1409a756-18ff-4ad8-939e-54f0215af46f/superbloom_web_3.jpg" alt="Superbloom">
+      <span class="strip-slide-tag">Masterplan</span>
+      <div class="strip-slide-caption">
+        <div class="strip-caption-title">Superbloom / Lancaster</div>
+        <div class="strip-caption-meta">Agency Artifact &middot; 50 acres</div>
+      </div>
+    </div>
+    <div class="strip-slide" style="width:380px">
+      <img src="https://images.squarespace-cdn.com/content/v1/6772fe52cc15853d7a83a950/25a4da9c-78ab-438c-b510-d8fdeb830d2f/2.+Courtyard+02.jpg" alt="The Outdoor Office">
+      <span class="strip-slide-tag">Architecture</span>
+      <div class="strip-slide-caption">
+        <div class="strip-caption-title">The Outdoor Office</div>
+        <div class="strip-caption-meta">Agency Artifact &middot; Commercial</div>
+      </div>
+    </div>
+    <div class="strip-slide" style="width:460px">
+      <img src="https://images.squarespace-cdn.com/content/v1/6772fe52cc15853d7a83a950/83337015-22c5-4698-9001-8968577a006b/1OM_MODEL_07_IG.jpg" alt="1 October Memorial">
+      <span class="strip-slide-tag">Civic</span>
+      <div class="strip-slide-caption">
+        <div class="strip-caption-title">1 October Memorial</div>
+        <div class="strip-caption-meta">Agency Artifact &middot; Las Vegas</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     MANIFESTO
+══════════════════════════════════════════════ -->
+<div class="section-divider">
+  <span class="section-label">Our Conviction</span>
+  <span class="section-label">Los Angeles / Global</span>
+</div>
+
+<section class="manifesto-section">
+  <div class="manifesto-text">
+    The built world is the sum of <em>decisions</em>.
+    We make those decisions deliberately,
+    with beauty and equity as non-negotiable parameters.
+  </div>
+  <div class="manifesto-details">
+    <div class="manifesto-stat">
+      <div class="stat-number">4</div>
+      <div class="stat-label">Scales of work</div>
+    </div>
+    <div class="manifesto-stat">
+      <div class="stat-number">LA</div>
+      <div class="stat-label">Base, global reach</div>
+    </div>
+    <div class="manifesto-stat">
+      <div class="stat-number">&infin;</div>
+      <div class="stat-label">Scales of intervention</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     SEPARATOR
+══════════════════════════════════════════════ -->
+<div class="separator-bar" id="scales">
+  <span class="separator-label">Our Work</span>
+  <span class="separator-label">04 Scales</span>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     FOUR SCALES
+══════════════════════════════════════════════ -->
+<section class="studios-section">
+
+  <div class="studio-panel panel-territory">
+    <div class="panel-divider"></div>
+    <div class="studio-panel-inner">
+      <div>
+        <div class="panel-number">01 / 04</div>
+      </div>
+      <div>
+        <div class="panel-tag">Land &amp; Urbanism</div>
+        <h2 class="panel-title">Territory</h2>
+        <p class="panel-subtitle">You shape the land</p>
+        <p class="panel-desc">Masterplan, parks, and large-scale land work. The ground where public life takes root and common ground is made real.</p>
+        <div class="panel-gallery">
+          <div class="panel-gallery-item">
+            <img src="assets/img/Agency Artifact Images/TERRITORY/park/Shriners Hospital/Shriners_020_NilsTimm-1.jpg" alt="Shriners Hospital Campus">
+            <div class="panel-gallery-caption">
+              <div class="panel-gallery-name">Shriners Hospital</div>
+              <div class="panel-gallery-studio">Agency Artifact</div>
+            </div>
+          </div>
+          <div class="panel-gallery-item">
+            <img src="assets/img/Agency Artifact Images/TERRITORY/masterplan/Connecting Compton/connecting_compton_1.jpg" alt="Connecting Compton">
+            <div class="panel-gallery-caption">
+              <div class="panel-gallery-name">Connecting Compton</div>
+              <div class="panel-gallery-studio">Agency Artifact</div>
+            </div>
+          </div>
+          <div class="panel-gallery-item">
+            <img src="assets/img/Agency Artifact Images/TERRITORY/park/Garden of the Horizon/glendower2404-034.jpg" alt="Garden of the Horizon">
+            <div class="panel-gallery-caption">
+              <div class="panel-gallery-name">Garden of the Horizon</div>
+              <div class="panel-gallery-studio">Agency Artifact</div>
+            </div>
+          </div>
+          <div class="panel-gallery-item">
+            <img src="assets/img/Atelier Galileo Images/TERRITORY/TENCENT/cam_46_171209_fine copy.jpg" alt="Tencent Campus">
+            <div class="panel-gallery-caption">
+              <div class="panel-gallery-name">Tencent Campus</div>
+              <div class="panel-gallery-studio">Atelier Galileo</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="territory/" class="panel-enter">Explore</a>
+    </div>
+  </div>
+
+  <div class="studio-panel panel-habitat">
+    <div class="panel-divider"></div>
+    <div class="studio-panel-inner">
+      <div>
+        <div class="panel-number">02 / 04</div>
+      </div>
+      <div>
+        <div class="panel-tag">Architecture &amp; Landscape</div>
+        <h2 class="panel-title">Habitat</h2>
+        <p class="panel-subtitle">You shape how people live</p>
+        <p class="panel-desc">Architecture and landscape at the building scale. The structures where daily life finds its rhythm, its warmth, and its dignity.</p>
+        <div class="panel-gallery">
+          <div class="panel-gallery-item">
+            <img src="assets/img/Agency Artifact Images/HABITAT/residential/Isla Intersections/aerial_new.jpg" alt="Isla Intersections">
+            <div class="panel-gallery-caption">
+              <div class="panel-gallery-name">Isla Intersections</div>
+              <div class="panel-gallery-studio">Agency Artifact</div>
+            </div>
+          </div>
+          <div class="panel-gallery-item">
+            <img src="assets/img/Agency Artifact Images/HABITAT/residential/Superbloom/superbloom_web_3.jpg" alt="Superbloom">
+            <div class="panel-gallery-caption">
+              <div class="panel-gallery-name">Superbloom</div>
+              <div class="panel-gallery-studio">Agency Artifact</div>
+            </div>
+          </div>
+          <div class="panel-gallery-item">
+            <img src="assets/img/Atelier Galileo Images/HABITAT/Z HOTEL/Aerial.jpg" alt="Z Hotel">
+            <div class="panel-gallery-caption">
+              <div class="panel-gallery-name">Z Hotel</div>
+              <div class="panel-gallery-studio">Atelier Galileo</div>
+            </div>
+          </div>
+          <div class="panel-gallery-item">
+            <img src="assets/img/Agency Artifact Images/HABITAT/commercial/Jinan Central Park/A-11-AERIAL.jpg" alt="Jinan Central Park">
+            <div class="panel-gallery-caption">
+              <div class="panel-gallery-name">Jinan Central Park</div>
+              <div class="panel-gallery-studio">Agency Artifact</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="habitat/" class="panel-enter">Explore</a>
+    </div>
+  </div>
+
+  <div class="studio-panel panel-atmosphere">
+    <div class="panel-divider"></div>
+    <div class="studio-panel-inner">
+      <div>
+        <div class="panel-number">03 / 04</div>
+      </div>
+      <div>
+        <div class="panel-tag">Interior &amp; Material</div>
+        <h2 class="panel-title">Atmosphere</h2>
+        <p class="panel-subtitle">You shape how it feels</p>
+        <p class="panel-desc">Interior architecture, material palettes, and spatial sequences. The rooms where presence, light, and texture become experience.</p>
+        <div class="panel-gallery">
+          <div class="panel-gallery-item">
+            <img src="assets/img/Atelier Galileo Images/ATMOSPHERE/CAFE BOULUD/CAFE_BOULUD_BH_HD_02.jpg" alt="Cafe Boulud">
+            <div class="panel-gallery-caption">
+              <div class="panel-gallery-name">Cafe Boulud</div>
+              <div class="panel-gallery-studio">Atelier Galileo</div>
+            </div>
+          </div>
+          <div class="panel-gallery-item">
+            <img src="assets/img/Agency Artifact Images/ATMOSPHERE/The Outdoor Office/2.+Courtyard+02.jpg" alt="The Outdoor Office">
+            <div class="panel-gallery-caption">
+              <div class="panel-gallery-name">The Outdoor Office</div>
+              <div class="panel-gallery-studio">Agency Artifact</div>
+            </div>
+          </div>
+          <div class="panel-gallery-item">
+            <img src="assets/img/Atelier Galileo Images/ATMOSPHERE/SUNSET VILLA/HIGH RES/Exterior.jpg" alt="Sunset Villa">
+            <div class="panel-gallery-caption">
+              <div class="panel-gallery-name">Sunset Villa</div>
+              <div class="panel-gallery-studio">Atelier Galileo</div>
+            </div>
+          </div>
+          <div class="panel-gallery-item">
+            <img src="assets/img/Atelier Galileo Images/ATMOSPHERE/ROYAL FROMENTIN/Lobby_FINAL.jpg" alt="Royal Fromentin">
+            <div class="panel-gallery-caption">
+              <div class="panel-gallery-name">Royal Fromentin</div>
+              <div class="panel-gallery-studio">Atelier Galileo</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="atmosphere/" class="panel-enter">Explore</a>
+    </div>
+  </div>
+
+  <div class="studio-panel panel-artifact">
+    <div class="studio-panel-inner">
+      <div>
+        <div class="panel-number">04 / 04</div>
+      </div>
+      <div>
+        <div class="panel-tag">Object &amp; Activation</div>
+        <h2 class="panel-title">Artifact</h2>
+        <p class="panel-subtitle">You shape the thing itself</p>
+        <p class="panel-desc">Installations, furniture, activations, and cultural collaborations. Work that exists at the scale of encounter.</p>
+        <div class="panel-gallery">
+          <div class="panel-gallery-item">
+            <img src="assets/img/Agency Artifact Images/ARTIFACT/experience/1 October Memorial/1OM_MODEL_06_IG.jpg" alt="1 October Memorial">
+            <div class="panel-gallery-caption">
+              <div class="panel-gallery-name">1 October Memorial</div>
+              <div class="panel-gallery-studio">Agency Artifact</div>
+            </div>
+          </div>
+          <div class="panel-gallery-item">
+            <img src="assets/img/Agency Artifact Images/ARTIFACT/experience/Maison Hermes/hermes_1.jpg" alt="Maison Hermes">
+            <div class="panel-gallery-caption">
+              <div class="panel-gallery-name">Maison Hermes</div>
+              <div class="panel-gallery-studio">Agency Artifact</div>
+            </div>
+          </div>
+          <div class="panel-gallery-item">
+            <img src="assets/img/Agency Artifact Images/ARTIFACT/experience/Botanical Showroom/342A3140.jpg" alt="Botanical Showroom">
+            <div class="panel-gallery-caption">
+              <div class="panel-gallery-name">Botanical Showroom</div>
+              <div class="panel-gallery-studio">Agency Artifact</div>
+            </div>
+          </div>
+          <div class="panel-gallery-item">
+            <img src="assets/img/Atelier Galileo Images/ARTIFACT/IF ONLY BUILDINGS COULD TALK/z hotel facade_E_00007_.jpg" alt="If Only Buildings Could Talk">
+            <div class="panel-gallery-caption">
+              <div class="panel-gallery-name">If Only Buildings Could Talk</div>
+              <div class="panel-gallery-studio">Atelier Galileo</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="artifact/" class="panel-enter">Explore</a>
+    </div>
+  </div>
+
+</section>
+
+<!-- ══════════════════════════════════════════════
+     LATITUDE — GLOBAL REACH
+══════════════════════════════════════════════ -->
+<section class="latitude-section">
+  <div class="latitude-text">
+    <span class="latitude-eyebrow">Reach</span>
+    <h2 class="latitude-headline">
+      Same conviction<br>
+      <em>at every altitude</em><br>
+      Specific decision<br>
+      <em>at every latitude</em>
+    </h2>
+    <p class="latitude-body">
+      The scale changes. From masterplans to objects, from cities to room. The conviction doesn't. What changes is the answer. Every site carries its own conditions, its own climate, its own question. The work listens before it speaks.
+    </p>
+  </div>
+  <div class="latitude-map">
+    <div class="latitude-map-wrap">
+      <img class="latitude-map-img" src="assets/img/WORLD MAP.png" alt="World map showing project locations">
+      <svg class="latitude-map-markers" viewBox="0 0 1000 500" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <filter id="markerGlow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="4" result="blur"/>
+            <feMerge>
+              <feMergeNode in="blur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+        </defs>
+        <!-- Los Angeles -->
+        <circle cx="207" cy="245" r="8" fill="none" stroke="rgba(184,168,130,0.3)" stroke-width="0.7">
+          <animate attributeName="r" values="8;24;8" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1;0.4 0 0.2 1"/>
+          <animate attributeName="stroke-opacity" values="0.3;0;0.3" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1;0.4 0 0.2 1"/>
+        </circle>
+        <circle cx="207" cy="245" r="8" fill="rgba(184,168,130,0.15)" filter="url(#markerGlow)"/>
+        <circle cx="207" cy="245" r="4" fill="#B8A882"/>
+        <circle cx="207" cy="245" r="1.5" fill="#F7F4EF"/>
+        <text x="195" y="249" font-family="'DM Mono', monospace" font-size="9" fill="rgba(184,168,130,0.55)" text-anchor="end" letter-spacing="2.5">LOS ANGELES</text>
+        <!-- Monterrey -->
+        <circle cx="244" cy="259" r="8" fill="none" stroke="rgba(184,168,130,0.3)" stroke-width="0.7">
+          <animate attributeName="r" values="8;24;8" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1;0.4 0 0.2 1"/>
+          <animate attributeName="stroke-opacity" values="0.3;0;0.3" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1;0.4 0 0.2 1"/>
+        </circle>
+        <circle cx="244" cy="259" r="8" fill="rgba(184,168,130,0.15)" filter="url(#markerGlow)"/>
+        <circle cx="244" cy="259" r="4" fill="#B8A882"/>
+        <circle cx="244" cy="259" r="1.5" fill="#F7F4EF"/>
+        <text x="256" y="272" font-family="'DM Mono', monospace" font-size="9" fill="rgba(184,168,130,0.55)" text-anchor="start" letter-spacing="2.5">MONTERREY</text>
+        <!-- Paris -->
+        <circle cx="480" cy="204" r="8" fill="none" stroke="rgba(184,168,130,0.3)" stroke-width="0.7">
+          <animate attributeName="r" values="8;24;8" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1;0.4 0 0.2 1"/>
+          <animate attributeName="stroke-opacity" values="0.3;0;0.3" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1;0.4 0 0.2 1"/>
+        </circle>
+        <circle cx="480" cy="204" r="8" fill="rgba(184,168,130,0.15)" filter="url(#markerGlow)"/>
+        <circle cx="480" cy="204" r="4" fill="#B8A882"/>
+        <circle cx="480" cy="204" r="1.5" fill="#F7F4EF"/>
+        <text x="468" y="208" font-family="'DM Mono', monospace" font-size="9" fill="rgba(184,168,130,0.55)" text-anchor="end" letter-spacing="2.5">PARIS</text>
+        <!-- Dubai -->
+        <circle cx="599" cy="269" r="8" fill="none" stroke="rgba(184,168,130,0.3)" stroke-width="0.7">
+          <animate attributeName="r" values="8;24;8" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1;0.4 0 0.2 1"/>
+          <animate attributeName="stroke-opacity" values="0.3;0;0.3" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1;0.4 0 0.2 1"/>
+        </circle>
+        <circle cx="599" cy="269" r="8" fill="rgba(184,168,130,0.15)" filter="url(#markerGlow)"/>
+        <circle cx="599" cy="269" r="4" fill="#B8A882"/>
+        <circle cx="599" cy="269" r="1.5" fill="#F7F4EF"/>
+        <text x="599" y="293" font-family="'DM Mono', monospace" font-size="9" fill="rgba(184,168,130,0.55)" text-anchor="middle" letter-spacing="2.5">DUBAI</text>
+        <!-- Bangalore -->
+        <circle cx="656" cy="287" r="8" fill="none" stroke="rgba(184,168,130,0.3)" stroke-width="0.7">
+          <animate attributeName="r" values="8;24;8" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1;0.4 0 0.2 1"/>
+          <animate attributeName="stroke-opacity" values="0.3;0;0.3" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1;0.4 0 0.2 1"/>
+        </circle>
+        <circle cx="656" cy="287" r="8" fill="rgba(184,168,130,0.15)" filter="url(#markerGlow)"/>
+        <circle cx="656" cy="287" r="4" fill="#B8A882"/>
+        <circle cx="656" cy="287" r="1.5" fill="#F7F4EF"/>
+        <text x="656" y="311" font-family="'DM Mono', monospace" font-size="9" fill="rgba(184,168,130,0.55)" text-anchor="middle" letter-spacing="2.5">BANGALORE</text>
+        <!-- Shanghai -->
+        <circle cx="775" cy="172" r="8" fill="none" stroke="rgba(184,168,130,0.3)" stroke-width="0.7">
+          <animate attributeName="r" values="8;24;8" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1;0.4 0 0.2 1"/>
+          <animate attributeName="stroke-opacity" values="0.3;0;0.3" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1;0.4 0 0.2 1"/>
+        </circle>
+        <circle cx="775" cy="172" r="8" fill="rgba(184,168,130,0.15)" filter="url(#markerGlow)"/>
+        <circle cx="775" cy="172" r="4" fill="#B8A882"/>
+        <circle cx="775" cy="172" r="1.5" fill="#F7F4EF"/>
+        <text x="787" y="176" font-family="'DM Mono', monospace" font-size="9" fill="rgba(184,168,130,0.55)" text-anchor="start" letter-spacing="2.5">SHANGHAI</text>
+        <!-- Puto -->
+        <circle cx="786" cy="184" r="8" fill="none" stroke="rgba(184,168,130,0.3)" stroke-width="0.7">
+          <animate attributeName="r" values="8;24;8" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1;0.4 0 0.2 1"/>
+          <animate attributeName="stroke-opacity" values="0.3;0;0.3" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1;0.4 0 0.2 1"/>
+        </circle>
+        <circle cx="786" cy="184" r="8" fill="rgba(184,168,130,0.15)" filter="url(#markerGlow)"/>
+        <circle cx="786" cy="184" r="4" fill="#B8A882"/>
+        <circle cx="786" cy="184" r="1.5" fill="#F7F4EF"/>
+        <text x="798" y="188" font-family="'DM Mono', monospace" font-size="9" fill="rgba(184,168,130,0.55)" text-anchor="start" letter-spacing="2.5">PUTO</text>
+        <!-- Shenzhen -->
+        <circle cx="766" cy="204" r="8" fill="none" stroke="rgba(184,168,130,0.3)" stroke-width="0.7">
+          <animate attributeName="r" values="8;24;8" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1;0.4 0 0.2 1"/>
+          <animate attributeName="stroke-opacity" values="0.3;0;0.3" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1;0.4 0 0.2 1"/>
+        </circle>
+        <circle cx="766" cy="204" r="8" fill="rgba(184,168,130,0.15)" filter="url(#markerGlow)"/>
+        <circle cx="766" cy="204" r="4" fill="#B8A882"/>
+        <circle cx="766" cy="204" r="1.5" fill="#F7F4EF"/>
+        <text x="778" y="208" font-family="'DM Mono', monospace" font-size="9" fill="rgba(184,168,130,0.55)" text-anchor="start" letter-spacing="2.5">SHENZHEN</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     NEWS
+══════════════════════════════════════════════ -->
+<section class="news-section-parent">
+  <div class="news-inner-parent">
+    <div class="news-header-parent">
+      <h2 class="news-title-parent">News</h2>
+      <a href="#" class="news-view-all-parent">&rarr; View All</a>
+    </div>
+
+    <div class="news-grid-parent">
+
+      <a href="#" class="news-card-parent">
+        <div class="news-card-img-parent">
+          <img src="assets/img/Atelier Galileo Images/ATMOSPHERE/MUSE/COMPLETED-01.jpg" alt="Muse Project">
+        </div>
+        <div class="news-card-meta-parent">
+          <span>Studio</span><span>Apr 2, 2024</span>
+        </div>
+        <h3 class="news-card-title-parent">Meet the Visionary Behind Form/Ground</h3>
+      </a>
+
+      <a href="#" class="news-card-parent news-card-parent--tall">
+        <div class="news-card-img-parent">
+          <img src="assets/img/Atelier Galileo Images/ATMOSPHERE/CAFE BOULUD/CAFE_BOULUD_BH_HD_03.jpg" alt="Cafe Boulud">
+        </div>
+        <div class="news-card-meta-parent">
+          <span>Award</span><span>Jan 5, 2024</span>
+        </div>
+        <h3 class="news-card-title-parent">Form/Ground Nominated as Top 3 Architecture Bureau in Germany</h3>
+      </a>
+
+      <a href="#" class="news-card-parent">
+        <div class="news-card-img-parent">
+          <img src="assets/img/Atelier Galileo Images/ATMOSPHERE/SUNSET VILLA/HIGH RES/Exterior.jpg" alt="Sunset Villa">
+        </div>
+        <div class="news-card-meta-parent">
+          <span>News</span><span>Dec 23, 2023</span>
+        </div>
+        <h3 class="news-card-title-parent">Latest Commercial Design by Form/Ground</h3>
+      </a>
+
+      <a href="#" class="news-card-parent">
+        <div class="news-card-img-parent">
+          <img src="assets/img/Atelier Galileo Images/ATMOSPHERE/ROYAL FROMENTIN/Lobby_FINAL.jpg" alt="Royal Fromentin">
+        </div>
+        <div class="news-card-meta-parent">
+          <span>Studio</span><span>Nov 10, 2023</span>
+        </div>
+        <h3 class="news-card-title-parent">How We Developed Our Work Culture</h3>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     INFO / CONTACT
+══════════════════════════════════════════════ -->
+<section class="info-section">
+  <div class="info-col">
+    <span class="info-label">Contact</span>
+    <a href="mailto:info@formground.com" class="info-link">info@formground.com</a>
+    <a href="tel:+13100000000" class="info-link">+1 310 000 0000</a>
+  </div>
+  <div class="info-col">
+    <span class="info-label">Studio</span>
+    <p class="info-text">123 Address Street<br>Los Angeles, CA 90001</p>
+  </div>
+  <div class="info-col">
+    <span class="info-label">Follow</span>
+    <a href="#" class="info-link">Instagram</a>
+    <a href="#" class="info-link">LinkedIn</a>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════════ -->
+<footer class="footer-parent">
+  <div class="footer-logo">FORM/GROUND</div>
+  <div class="footer-note">&copy; 2025 Parent Entity Name TBD</div>
+</footer>
+
+</div><!-- .scroll-wrapper -->
+
+<script>
+// ═══════════════════════════════════════════════
+// VIRTUAL-SCROLL ENGINE (index page)
+//
+// Architecture:
+//   • Body is tall (content × multiplier) for the native scrollbar.
+//   • A position:fixed wrapper holds ALL visual content.
+//   • ONE lerped translateY on the wrapper = zero inter-element drift.
+//   • Scroll multiplier slows everything down (1.25:1 ratio).
+//
+// No scroll-snap. No scrollbar hijacking. Native scroll works normally.
+// ═══════════════════════════════════════════════
+
+const wrapper = document.getElementById('scrollWrapper');
+
+// ─── Tuning constants ─────────────────────
+const LERP     = 0.08;   // lower = heavier inertia (0.05–0.12)
+const SCROLL_M = 1.25;   // body is 1.25× content → 1.25:1 scroll-to-visual ratio
+
+// ─── State ─────────────────────────────────
+let smoothScroll = 0;
+let vh = window.innerHeight;
+
+function lerp(a, b, t) { return a + (b - a) * t; }
+
+// ─── Layout measurements ──────────────────
+let contentH = 0;
+
+function measure() {
+  vh = window.innerHeight;
+  contentH = wrapper.scrollHeight;
+  document.body.style.height =
+    (SCROLL_M * (contentH - vh) + vh) + 'px';
+}
+
+measure();
+window.addEventListener('resize', measure, { passive: true });
+
+// ─── Main loop ─────────────────────────────
+function tick() {
+  const target = window.scrollY / SCROLL_M;
+  smoothScroll = lerp(smoothScroll, target, LERP);
+  if (Math.abs(smoothScroll - target) < 0.5) smoothScroll = target;
+
+  wrapper.style.transform = `translateY(${-smoothScroll}px)`;
+
+  requestAnimationFrame(tick);
+}
+
+requestAnimationFrame(tick);
+</script>
+
+<script src="assets/js/cursor.js"></script>
+<script src="assets/js/strip.js"></script>
+<script src="assets/js/nav.js"></script>
+</body>
+</html>
